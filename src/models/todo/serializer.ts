@@ -9,9 +9,10 @@ export class TodoSerializer implements Serializer {
         todo.id = json.id
         todo.title = json.title
         todo.description = json.description
-        todo.complete = json.complete
+        todo.complete = json.completed
         return todo
     }
+    
 
     toJson(item: Todo) {
         const obj: any = {}

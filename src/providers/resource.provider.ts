@@ -9,7 +9,6 @@ import axios from "axios";
 import { environment } from "../environment/environment";
 const API_BASE_URL = environment.basePath;
 
-let newData = {};
 
 export class ResourceProvider<T extends Resource> {
     constructor(public endpoint: string, public serializer: Serializer) { }
@@ -31,8 +30,7 @@ export class ResourceProvider<T extends Resource> {
             .toPromise();
     }
     private convertList(data: any, endpoint = ""): any {
-        
-        newData = data;
+        console.log(data)
         return {
             results: data.map((item: any) => this.serializer.fromJson(item)),
         };
