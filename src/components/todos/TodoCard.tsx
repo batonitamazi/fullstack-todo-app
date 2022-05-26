@@ -2,14 +2,12 @@ import * as React from 'react';
 import Card from '@mui/material/Card';
 import CardActions from '@mui/material/CardActions';
 import CardContent from '@mui/material/CardContent';
-import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
 import { todoService } from '../../models/todo/service';
 import { Todo } from '../../models/todo/Todo';
 import Checkbox from '@mui/material/Checkbox';
 
 
-const label = { inputProps: { 'aria-label': 'Checkbox demo' } };
 
 
 export default function MediaCard(props: any) {
